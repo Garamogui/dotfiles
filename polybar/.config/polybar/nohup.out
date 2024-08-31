@@ -1,0 +1,3 @@
+/home/garamog/xborder/xborders:284: DeprecationWarning: Gtk.Window.set_wmclass is deprecated
+  self.set_wmclass("xborders", "xborder")
+GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable

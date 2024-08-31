@@ -1,0 +1,8 @@
+alias v="nvim"
+alias vi="nvim"
+alias vim="nvim"
+alias cls="clear"
+alias nrd="npm run dev"
+alias cpick="$HOME/Downloads/colorpicker/colorpicker/colorpicker"
+alias border="nohup xborder/xborders --border-radius 20 --border-rgba #89B4FA"
+alias ls="eza"
