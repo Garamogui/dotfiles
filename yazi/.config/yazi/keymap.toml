@@ -1,0 +1,16 @@
+[[manager.prepend_keymap]]
+on   = [ "g", "l"]
+run  = "cd ~/Documents/www/tolearn-mvp-5/client"
+desc = "Go 'toLearn-mvp-5/client' directory"
+
+[[manager.prepend_keymap]]
+on   = [ "g", "p" ]
+run  = "cd ~/Pictures"
+desc = "Go 'Pictures' directory"
+
+[[manager.prepend_keymap]]
+on   = [ "g", "w" ]
+run  = "cd ~/Documents/www"
+desc = "Go 'www' directory"
+
+

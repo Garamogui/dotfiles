@@ -53,7 +53,7 @@ echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 bindkey -s '^o' 'yazi\n'
-bindkey -s '^f' 'fzf --multi --preview "bat --style=numbers --color=always {}" | xargs -n 1 nvim\n'
+bindkey -s '^f' 'fzf --multi --preview "bat --style=numbers --color=always {}" | xargs -I{} xdg-open "{}"\n '
 
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
@@ -70,10 +70,13 @@ bindkey '^e' edit-command-line
 
 export PATH="$HOME/Scripts:$PATH"
 
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+eval "$(starship init zsh)"
+
 # Load zsh-syntax-highlighting; should be last.
 # ~/.zshrc
 eval "$(zoxide init zsh)"
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
