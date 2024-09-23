@@ -1,3 +1,15 @@
+# Import colorscheme from 'wal' asynchronously
+# &   # Run the process in the background.
+# ( ) # Hide shell job control messages.
+# Not supported in the "fish" shell.
+(cat ~/.cache/wal/sequences &)
+
+# Alternative (blocks terminal for 0-3ms)
+cat ~/.cache/wal/sequences
+
+# To add support for TTYs this line can be optionally added.
+source ~/.cache/wal/colors-tty.sh
+
 # Enable colors and change prompt:
 autoload -U colors && colors
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
@@ -72,7 +84,7 @@ export PATH="$HOME/Scripts:$PATH"
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 
 # Load zsh-syntax-highlighting; should be last.
 # ~/.zshrc

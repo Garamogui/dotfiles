@@ -1,11 +1,11 @@
 return {
-  'nvim-lualine/lualine.nvim',
-  config = function()
-    require('lualine').setup({
-      options = {
-        theme = 'horizon',
-        transparent = true
-      }
-    })
-  end
+ 'nvim-lualine/lualine.nvim',
+ config = function()
+  require('lualine').setup({
+   options = {
+    theme = 'pywal-nvim',
+    transparent = true
+   }
+  })
+ end
 }

@@ -23,9 +23,9 @@ return {
 
 			local lspconfig = require("lspconfig")
       -- TypeScript
-			lspconfig.tsserver.setup({
-				capabilities = capabilities,
-			})
+--			lspconfig.tsserver.setup({
+--				capabilities = capabilities,
+--			})
       -- Python
 			lspconfig.pylsp.setup({
 				capabilities = capabilities,

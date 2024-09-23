@@ -5,7 +5,7 @@ map("n", "<leader>so", ":w<CR>:so<CR>", { desc = "Save and source file." })
 
 --map("n", "<leader>po", ":Ex<CR>")
 
---Splitig buffers
+--Spliting buffers
 map("n", "<leader>hs", ":split<CR>", { desc = "" })
 map("n", "<leader>vs", ":vsplit<CR>")
 
@@ -43,13 +43,13 @@ map('n', '<leader>p', "\"+p", {desc = "Pastes from clipboard"})
 map('n', '<leader>P', "\"+P", {desc = "Pastes back from clipboard"})
 
 ------- Telescope Remaps ---------
-local builtin = require("telescope.builtin")
-map("n", "<C-p>", builtin.find_files, {})
--- map("n", "<leader>fg", builtin.live_grep, {})
-map("n", "<leader>fb", builtin.buffers, {})
-map("n", "<leader>fh", builtin.help_tags, {})
-
--- telescope
+-- local builtin = require("telescope.builtin")
+--map("n", "<C-p>", builtin.find_files, {})
+---- map("n", "<leader>fg", builtin.live_grep, {})
+--map("n", "<leader>fb", builtin.buffers, {})
+--map("n", "<leader>fh", builtin.help_tags, {})
+------- Telescope Remaps ---------
+---- telescope
 map("n", "<leader>fw", "<cmd>Telescope live_grep<CR>", { desc = "telescope live grep" })
 map("n", "<leader>fb", "<cmd>Telescope buffers<CR>", { desc = "telescope find buffers" })
 map("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", { desc = "telescope help page" })
@@ -59,21 +59,7 @@ map("n", "<leader>fz", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { desc = 
 map("n", "<leader>cm", "<cmd>Telescope git_commits<CR>", { desc = "telescope git commits" })
 map("n", "<leader>gt", "<cmd>Telescope git_status<CR>", { desc = "telescope git status" })
 map("n", "<leader>pt", "<cmd>Telescope terms<CR>", { desc = "telescope pick hidden term" })
-map("n", "<leader>th", "<cmd>Telescope themes<CR>", { desc = "telescope nvchad themes" })
-map("n", "<C-p>", "<cmd>Telescope find_files<cr>", { desc = "telescope find files" })
-map( "n", "<leader>fa", "<cmd>Telescope find_files follow=true no_ignore=true hidden=true<CR>", { desc = "telescope find all files" })
-
--- telescope
-map("n", "<leader>fw", "<cmd>Telescope live_grep<CR>", { desc = "telescope live grep" })
-map("n", "<leader>fb", "<cmd>Telescope buffers<CR>", { desc = "telescope find buffers" })
-map("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", { desc = "telescope help page" })
-map("n", "<leader>ma", "<cmd>Telescope marks<CR>", { desc = "telescope find marks" })
-map("n", "<leader>fo", "<cmd>Telescope oldfiles<CR>", { desc = "telescope find oldfiles" })
-map("n", "<leader>fz", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { desc = "telescope find in current buffer" })
-map("n", "<leader>cm", "<cmd>Telescope git_commits<CR>", { desc = "telescope git commits" })
-map("n", "<leader>gt", "<cmd>Telescope git_status<CR>", { desc = "telescope git status" })
-map("n", "<leader>pt", "<cmd>Telescope terms<CR>", { desc = "telescope pick hidden term" })
-map("n", "<leader>th", "<cmd>Telescope themes<CR>", { desc = "telescope nvchad themes" })
+-- map("n", "<leader>th", "<cmd>Telescope themes<CR>", { desc = "telescope nvchad themes" })
 map("n", "<C-p>", "<cmd>Telescope find_files<cr>", { desc = "telescope find files" })
 map( "n", "<leader>fa", "<cmd>Telescope find_files follow=true no_ignore=true hidden=true<CR>", { desc = "telescope find all files" })
 

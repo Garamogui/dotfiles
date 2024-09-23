@@ -1,10 +1,10 @@
-require('garamog.remaps')
-require('garamog.set')
-
 vim.cmd('set expandtab')
-vim.cmd('set tabstop=2')
-vim.cmd('set softtabstop=2')
-vim.cmd('set shiftwidth=2')
+vim.cmd('set tabstop=1')
+vim.cmd('set softtabstop=1')
+vim.cmd('set shiftwidth=1')
+vim.g.mapleader = " "
+
+require('garamog.set')
 
 ---------- Lazy - Package Manager ------------
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -22,4 +22,4 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup('plugins')
 
-
+require('garamog.remaps')
