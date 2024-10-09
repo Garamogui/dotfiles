@@ -81,6 +81,7 @@ bindkey '^e' edit-command-line
 # export GOPATH=$HOME/go
 
 export PATH="$HOME/Scripts:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 

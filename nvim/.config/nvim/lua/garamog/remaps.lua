@@ -1,5 +1,6 @@
 vim.g.mapleader = " "
 local map = vim.keymap.set
+
 -------------- Editor -----------------
 map("n", "<leader>so", ":w<CR>:so<CR>", { desc = "Save and source file." })
 
@@ -11,6 +12,9 @@ map("n", "<leader>vs", ":vsplit<CR>")
 
 map("n", "<leader>ss", ":w<CR>")
 map("n", "<leader>hl", ":nohlsearch<CR>")
+
+--- Increase and decrease width of the window
+
 
 -- esc clears highlights
 map("n", "<Esc>", "<cmd>noh<CR>", { desc = "General Clear highlights" })
