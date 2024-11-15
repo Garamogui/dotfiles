@@ -1,4 +1,3 @@
-vim.g.mapleader = " "
 local map = vim.keymap.set
 
 -------------- Editor -----------------
@@ -40,11 +39,11 @@ map('n', 'N', 'Nzzzv')
 map('x', '<leader>p', "\"_dp")
 
 ------- Clipboard ---------
-map('n', '<leader>y', "\"+y", {desc = "Saves to clipboard"})
-map('v', '<leader>y', "\"+y", {desc = "Saves to clipboard (visual mode)"})
-map('n', '<leader>Y', "\"+Y", {desc = "Saves current line to clipboard"})
-map('n', '<leader>p', "\"+p", {desc = "Pastes from clipboard"})
-map('n', '<leader>P', "\"+P", {desc = "Pastes back from clipboard"})
+map('n', '<leader>y', "\"+y", { desc = "Saves to clipboard" })
+map('v', '<leader>y', "\"+y", { desc = "Saves to clipboard (visual mode)" })
+map('n', '<leader>Y', "\"+Y", { desc = "Saves current line to clipboard" })
+map('n', '<leader>p', "\"+p", { desc = "Pastes from clipboard" })
+map('n', '<leader>P', "\"+P", { desc = "Pastes back from clipboard" })
 
 ------- Telescope Remaps ---------
 -- local builtin = require("telescope.builtin")
@@ -66,7 +65,8 @@ map("n", "<leader>br", "<cmd>Telescope git_branches<CR>", { desc = "telescope gi
 map("n", "<leader>pt", "<cmd>Telescope terms<CR>", { desc = "telescope pick hidden term" })
 -- map("n", "<leader>th", "<cmd>Telescope themes<CR>", { desc = "telescope nvchad themes" })
 map("n", "<C-p>", "<cmd>Telescope find_files<cr>", { desc = "telescope find files" })
-map( "n", "<leader>fa", "<cmd>Telescope find_files follow=true no_ignore=true hidden=true<CR>", { desc = "telescope find all files" })
+map("n", "<leader>fa", "<cmd>Telescope find_files follow=true no_ignore=true hidden=true<CR>",
+ { desc = "telescope find all files" })
 
 ------- Neotree ---------
 map('n', '<leader>po', ':Neotree source=filesystem reveal=true position=left <CR>')
@@ -76,6 +76,30 @@ map('n', '<leader>cd', ':Copilot disable<CR>')
 map('n', '<leader>ce', ':Copilot enable<CR>')
 
 
+------- tailwind sort --------
+map("n", "<leader>ts", ":TailwindSort<CR>")
 ------- Terminal --------
 -- terminal
 map("t", "<C-x>", "<C-\\><C-N>", { desc = "terminal escape terminal mode" })
+
+
+
+
+------- LuaSnip --------
+----- Yes, we're just executing a bunch of Vimscript, but this is the officially
+-- endorsed method; see https://github.com/L3MON4D3/LuaSnip#keymaps
+vim.cmd [[
+" Use Tab to expand and jump through snippets
+imap <silent><expr> <Tab> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>'
+smap <silent><expr> <Tab> luasnip#jumpable(1) ? '<Plug>luasnip-jump-next' : '<Tab>'
+
+" Use Shift-Tab to jump backwards through snippets
+imap <silent><expr> <S-Tab> luasnip#jumpable(-1) ? '<Plug>luasnip-jump-prev' : '<S-Tab>'
+" Jump backward through snippet tabstops with Shift-Tab (for example)
+smap <silent><expr> <S-Tab> luasnip#jumpable(-1) ? '<Plug>luasnip-jump-prev' : '<S-Tab>'
+
+" Cycle forward through choice nodes with Control-f (for example)
+imap <silent><expr> <C-f> luasnip#choice_active() ? '<Plug>luasnip-next-choice' : '<C-f>'
+smap <silent><expr> <C-f> luasnip#choice_active() ? '<Plug>luasnip-next-choice' : '<C-f>'
+
+]]
