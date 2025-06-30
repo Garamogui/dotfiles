@@ -1,5 +1,10 @@
 [[manager.prepend_keymap]]
 on   = [ "g", "d" ]
+run  = "cd ~/Documents"
+desc = "Cd to ~/Documents"
+
+[[manager.prepend_keymap]]
+on   = [ "g", "D" ]
 run  = "cd ~/Downloads"
 desc = "Cd to ~/Downloads"
 
@@ -7,3 +12,8 @@ desc = "Cd to ~/Downloads"
 on   = [ "g", "p" ]
 run  = "cd ~/Pictures"
 desc = "Cd to ~/Pictures"
+
+[[manager.prepend_keymap]]
+on   = [ "g", "w" ]
+run  = "cd ~/Documents/www"
+desc = "Cd to Projects folder"

@@ -15,6 +15,8 @@ autoload -U colors && colors
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
 
+
+
 # History in cache directory:
 HISTSIZE=10000
 SAVEHIST=10000
@@ -22,7 +24,11 @@ HISTFILE=$HOME/.config/zsh/.zsh_history
 
 export BROWSER="librewolf"
 export TERMINAL="kitty"
-export EDITOR="neovim"
+export EDITOR="nvim"
+export MANPAGER='nvim +Man!'
+#
+# a quick “m” command for Neovim Man
+
 
 # Basic auto/tab complete:
 autoload -U compinit
@@ -64,7 +70,7 @@ zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
-bindkey -s '^o' 'yazi\n'
+bindkey -s '^o' 'y\n'
 bindkey -s '^f' 'fzf --multi --preview "bat --style=numbers --color=always {}" | xargs -I{} xdg-open "{}"\n '
 
 # Edit line in vim with ctrl-e:
@@ -76,16 +82,27 @@ bindkey '^e' edit-command-line
 [ -f "$HOME/.config/zsh/aliasrc" ] && source "$HOME/.config/zsh/aliasrc"
 [ -f "$HOME/Scripts" ] && source "$HOME/Scripts"
 
+# Move the shell to the directory yazi exitted on.
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
 # GoLang
 # export PATH="$(go env GOPATH)/bin:$PATH"
 # export GOPATH=$HOME/go
 
-export PATH="$HOME/Scripts:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
+export PATH=":$HOME/Scripts:$PATH"
+export PATH=":$HOME/.local/bin:$PATH"
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+eval $(thefuck --alias)
 
-# eval "$(starship init zsh)"
+eval "$(starship init zsh)"
 
 # Load zsh-syntax-highlighting; should be last.
 # ~/.zshrc
@@ -93,3 +110,25 @@ eval "$(zoxide init zsh)"
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# ------ yazi ------
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
+# Using feh to tile the wallpaper now.
+# We grab the wallpaper location from wal's cache so 
+# that this works even when a directory is passed.
+wal-tile() {
+    wal -n -i "$@"
+    feh --bg-center "$(< "${HOME}/.cache/wal/wal")"
+}
+
+# Adding auto-suggestions
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# changes `accept` to ctrl + space
+bindkey '^ ' autosuggest-accept

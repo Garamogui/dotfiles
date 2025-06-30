@@ -3,7 +3,6 @@ return {
  config = function()
   require('lualine').setup({
    options = {
-    theme = 'pywal-nvim',
     transparent = true
    }
   })
