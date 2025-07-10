@@ -1,0 +1,1036 @@
+Build started at 2024-06-03T10:48:03.602475
+Main binary: /usr/bin/python3
+Build Options: -Dbuildtype=release
+Python system: Linux
+The Meson build system
+Version: 1.4.0
+Source dir: /home/garamog/.config/picom
+Build dir: /home/garamog/.config/picom/build
+Build type: native build
+Project name: picom
+Project version: 11
+-----------
+Detecting compiler via: `cc --version` -> 0
+stdout:
+cc (GCC) 14.1.1 20240522 (Red Hat 14.1.1-4)
+Copyright (C) 2024 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+-----------
+Running command: cc -E -dM -
+-----
+-----------
+Detecting linker via: `cc -Wl,--version` -> 0
+stdout:
+GNU ld version 2.41-37.fc40
+Copyright (C) 2023 Free Software Foundation, Inc.
+This program is free software; you may redistribute it under the terms of
+the GNU General Public License version 3 or (at your option) a later version.
+This program has absolutely no warranty.
+-----------
+stderr:
+collect2 version 14.1.1 20240522 (Red Hat 14.1.1-4)
+/usr/bin/ld -plugin /usr/libexec/gcc/x86_64-redhat-linux/14/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/14/lto-wrapper -plugin-opt=-fresolution=/tmp/cceItbNJ.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 /usr/lib/gcc/x86_64-redhat-linux/14/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/14/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/14/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/14 -L/usr/lib/gcc/x86_64-redhat-linux/14/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/14/../../.. --version -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-redhat-linux/14/crtend.o /usr/lib/gcc/x86_64-redhat-linux/14/../../../../lib64/crtn.o
+-----------
+Sanity testing C compiler: cc
+Is cross compiler: False.
+Sanity check compiler command line: cc sanitycheckc.c -o sanitycheckc.exe -D_FILE_OFFSET_BITS=64
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command:  /home/garamog/.config/picom/build/meson-private/sanitycheckc.exe
+C compiler for the host machine: cc (gcc 14.1.1 "cc (GCC) 14.1.1 20240522 (Red Hat 14.1.1-4)")
+C linker for the host machine: cc ld.bfd 2.41-37
+-----------
+Detecting archiver via: `gcc-ar --version` -> 0
+stdout:
+GNU ar version 2.41-37.fc40
+Copyright (C) 2023 Free Software Foundation, Inc.
+This program is free software; you may redistribute it under the terms of
+the GNU General Public License version 3 or (at your option) any later version.
+This program has absolutely no warranty.
+-----------
+-----------
+Detecting compiler via: `cc --version` -> 0
+stdout:
+cc (GCC) 14.1.1 20240522 (Red Hat 14.1.1-4)
+Copyright (C) 2024 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+-----------
+Running command: cc -E -dM -
+-----
+-----------
+Detecting linker via: `cc -Wl,--version` -> 0
+stdout:
+GNU ld version 2.41-37.fc40
+Copyright (C) 2023 Free Software Foundation, Inc.
+This program is free software; you may redistribute it under the terms of
+the GNU General Public License version 3 or (at your option) a later version.
+This program has absolutely no warranty.
+-----------
+stderr:
+collect2 version 14.1.1 20240522 (Red Hat 14.1.1-4)
+/usr/bin/ld -plugin /usr/libexec/gcc/x86_64-redhat-linux/14/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/14/lto-wrapper -plugin-opt=-fresolution=/tmp/ccjuTjUD.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 /usr/lib/gcc/x86_64-redhat-linux/14/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/14/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/14/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/14 -L/usr/lib/gcc/x86_64-redhat-linux/14/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/14/../../.. --version -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-redhat-linux/14/crtend.o /usr/lib/gcc/x86_64-redhat-linux/14/../../../../lib64/crtn.o
+-----------
+Sanity testing C compiler: cc
+Is cross compiler: False.
+Sanity check compiler command line: cc sanitycheckc.c -o sanitycheckc.exe -D_FILE_OFFSET_BITS=64
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command:  /home/garamog/.config/picom/build/meson-private/sanitycheckc.exe
+C compiler for the build machine: cc (gcc 14.1.1 "cc (GCC) 14.1.1 20240522 (Red Hat 14.1.1-4)")
+C linker for the build machine: cc ld.bfd 2.41-37
+-----------
+Detecting archiver via: `gcc-ar --version` -> 0
+stdout:
+GNU ar version 2.41-37.fc40
+Copyright (C) 2023 Free Software Foundation, Inc.
+This program is free software; you may redistribute it under the terms of
+the GNU General Public License version 3 or (at your option) any later version.
+This program has absolutely no warranty.
+-----------
+Build machine cpu family: x86_64
+Build machine cpu: x86_64
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Target machine cpu family: x86_64
+Target machine cpu: x86_64
+Program git found: YES (/usr/bin/git)
+Running command: /usr/bin/git rev-parse --short=5 HEAD
+--- stdout ---
+1fa8e
+
+--- stderr ---
+
+
+Running compile:
+Working directory:  /home/garamog/.config/picom/build/meson-private/tmps7ff8bup
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("stdc-predef.h")
+          #error "Header 'stdc-predef.h' could not be found"
+         #endif
+        #else
+         #include <stdc-predef.h>
+        #endif
+-----------
+Command line: `cc /home/garamog/.config/picom/build/meson-private/tmps7ff8bup/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 -std=c11` -> 0
+Has header "stdc-predef.h" : YES 
+Running compile:
+Working directory:  /home/garamog/.config/picom/build/meson-private/tmpyayemvqa
+Code:
+ extern int i;
+int i;
+
+-----------
+Command line: `cc /home/garamog/.config/picom/build/meson-private/tmpyayemvqa/testfile.c -o /home/garamog/.config/picom/build/meson-private/tmpyayemvqa/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wcast-function-type` -> 0
+Compiler for C supports arguments -Wcast-function-type: YES 
+Running compile:
+Working directory:  /home/garamog/.config/picom/build/meson-private/tmpvewtzb28
+Code:
+ extern int i;
+int i;
+
+-----------
+Command line: `cc /home/garamog/.config/picom/build/meson-private/tmpvewtzb28/testfile.c -o /home/garamog/.config/picom/build/meson-private/tmpvewtzb28/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wignored-qualifiers` -> 0
+Compiler for C supports arguments -Wignored-qualifiers: YES 
+Running compile:
+Working directory:  /home/garamog/.config/picom/build/meson-private/tmpxov4s60k
+Code:
+ extern int i;
+int i;
+
+-----------
+Command line: `cc /home/garamog/.config/picom/build/meson-private/tmpxov4s60k/testfile.c -o /home/garamog/.config/picom/build/meson-private/tmpxov4s60k/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wmissing-parameter-type` -> 0
+Compiler for C supports arguments -Wmissing-parameter-type: YES 
+Running compile:
+Working directory:  /home/garamog/.config/picom/build/meson-private/tmp99keod1b
+Code:
+ extern int i;
+int i;
+
+-----------
+Command line: `cc /home/garamog/.config/picom/build/meson-private/tmp99keod1b/testfile.c -o /home/garamog/.config/picom/build/meson-private/tmp99keod1b/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wnonnull` -> 0
+Compiler for C supports arguments -Wnonnull: YES 
+Running compile:
+Working directory:  /home/garamog/.config/picom/build/meson-private/tmppz9ayk_o
+Code:
+ extern int i;
+int i;
+
+-----------
+Command line: `cc /home/garamog/.config/picom/build/meson-private/tmppz9ayk_o/testfile.c -o /home/garamog/.config/picom/build/meson-private/tmppz9ayk_o/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wshadow` -> 0
+Compiler for C supports arguments -Wshadow: YES 
+Running compile:
+Working directory:  /home/garamog/.config/picom/build/meson-private/tmplfhqmvol
+Code:
+ extern int i;
+int i;
+
+-----------
+Command line: `cc /home/garamog/.config/picom/build/meson-private/tmplfhqmvol/testfile.c -o /home/garamog/.config/picom/build/meson-private/tmplfhqmvol/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wtype-limits -Wno-type-limits` -> 0
+Compiler for C supports arguments -Wno-type-limits: YES 
+Running compile:
+Working directory:  /home/garamog/.config/picom/build/meson-private/tmpv5rl1fc4
+Code:
+ extern int i;
+int i;
+
+-----------
+Command line: `cc /home/garamog/.config/picom/build/meson-private/tmpv5rl1fc4/testfile.c -o /home/garamog/.config/picom/build/meson-private/tmpv5rl1fc4/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wold-style-declaration` -> 0
+Compiler for C supports arguments -Wold-style-declaration: YES 
+Running compile:
+Working directory:  /home/garamog/.config/picom/build/meson-private/tmp7w634wze
+Code:
+ extern int i;
+int i;
+
+-----------
+Command line: `cc /home/garamog/.config/picom/build/meson-private/tmp7w634wze/testfile.c -o /home/garamog/.config/picom/build/meson-private/tmp7w634wze/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Woverride-init` -> 0
+Compiler for C supports arguments -Woverride-init: YES 
+Running compile:
+Working directory:  /home/garamog/.config/picom/build/meson-private/tmpdfttycc3
+Code:
+ extern int i;
+int i;
+
+-----------
+Command line: `cc /home/garamog/.config/picom/build/meson-private/tmpdfttycc3/testfile.c -o /home/garamog/.config/picom/build/meson-private/tmpdfttycc3/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wsign-compare` -> 0
+Compiler for C supports arguments -Wsign-compare: YES 
+Running compile:
+Working directory:  /home/garamog/.config/picom/build/meson-private/tmps69mox7o
+Code:
+ extern int i;
+int i;
+
+-----------
+Command line: `cc /home/garamog/.config/picom/build/meson-private/tmps69mox7o/testfile.c -o /home/garamog/.config/picom/build/meson-private/tmps69mox7o/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wtype-limits` -> 0
+Compiler for C supports arguments -Wtype-limits: YES 
+Running compile:
+Working directory:  /home/garamog/.config/picom/build/meson-private/tmpjeiklbab
+Code:
+ extern int i;
+int i;
+
+-----------
+Command line: `cc /home/garamog/.config/picom/build/meson-private/tmpjeiklbab/testfile.c -o /home/garamog/.config/picom/build/meson-private/tmpjeiklbab/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wuninitialized` -> 0
+Compiler for C supports arguments -Wuninitialized: YES 
+Running compile:
+Working directory:  /home/garamog/.config/picom/build/meson-private/tmponqfrtfi
+Code:
+ extern int i;
+int i;
+
+-----------
+Command line: `cc /home/garamog/.config/picom/build/meson-private/tmponqfrtfi/testfile.c -o /home/garamog/.config/picom/build/meson-private/tmponqfrtfi/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wshift-negative-value` -> 0
+Compiler for C supports arguments -Wshift-negative-value: YES 
+Running compile:
+Working directory:  /home/garamog/.config/picom/build/meson-private/tmpuybxosa8
+Code:
+ extern int i;
+int i;
+
+-----------
+Command line: `cc /home/garamog/.config/picom/build/meson-private/tmpuybxosa8/testfile.c -o /home/garamog/.config/picom/build/meson-private/tmpuybxosa8/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wunused-but-set-parameter` -> 0
+Compiler for C supports arguments -Wunused-but-set-parameter: YES 
+Running compile:
+Working directory:  /home/garamog/.config/picom/build/meson-private/tmpv605dw_l
+Code:
+ extern int i;
+int i;
+
+-----------
+Command line: `cc /home/garamog/.config/picom/build/meson-private/tmpv605dw_l/testfile.c -o /home/garamog/.config/picom/build/meson-private/tmpv605dw_l/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wunused-parameter` -> 0
+Compiler for C supports arguments -Wunused-parameter: YES 
+Running compile:
+Working directory:  /home/garamog/.config/picom/build/meson-private/tmpmdoo9p0u
+Code:
+ extern int i;
+int i;
+
+-----------
+Command line: `cc /home/garamog/.config/picom/build/meson-private/tmpmdoo9p0u/testfile.c -o /home/garamog/.config/picom/build/meson-private/tmpmdoo9p0u/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wimplicit-fallthrough=2` -> 0
+Compiler for C supports arguments -Wimplicit-fallthrough=2: YES 
+Running compile:
+Working directory:  /home/garamog/.config/picom/build/meson-private/tmpe5e5u_bb
+Code:
+ extern int i;
+int i;
+
+-----------
+Command line: `cc /home/garamog/.config/picom/build/meson-private/tmpe5e5u_bb/testfile.c -o /home/garamog/.config/picom/build/meson-private/tmpe5e5u_bb/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wunknown-warning-option -Wno-unknown-warning-option` -> 1
+stderr:
+cc: error: unrecognized command-line option '-Wunknown-warning-option'
+-----------
+Compiler for C supports arguments -Wno-unknown-warning-option: NO 
+Running compile:
+Working directory:  /home/garamog/.config/picom/build/meson-private/tmpn5muy0e6
+Code:
+ extern int i;
+int i;
+
+-----------
+Command line: `cc /home/garamog/.config/picom/build/meson-private/tmpn5muy0e6/testfile.c -o /home/garamog/.config/picom/build/meson-private/tmpn5muy0e6/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wmissing-braces -Wno-missing-braces` -> 0
+Compiler for C supports arguments -Wno-missing-braces: YES 
+Running compile:
+Working directory:  /home/garamog/.config/picom/build/meson-private/tmpkkeonfjr
+Code:
+ extern int i;
+int i;
+
+-----------
+Command line: `cc /home/garamog/.config/picom/build/meson-private/tmpkkeonfjr/testfile.c -o /home/garamog/.config/picom/build/meson-private/tmpkkeonfjr/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wconversion` -> 0
+Compiler for C supports arguments -Wconversion: YES 
+Running compile:
+Working directory:  /home/garamog/.config/picom/build/meson-private/tmpaivc909f
+Code:
+ extern int i;
+int i;
+
+-----------
+Command line: `cc /home/garamog/.config/picom/build/meson-private/tmpaivc909f/testfile.c -o /home/garamog/.config/picom/build/meson-private/tmpaivc909f/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wempty-body` -> 0
+Compiler for C supports arguments -Wempty-body: YES 
+Running compile:
+Working directory:  /home/garamog/.config/picom/build/meson-private/tmpf8io5qb2
+Code:
+ extern int i;
+int i;
+
+-----------
+Command line: `cc /home/garamog/.config/picom/build/meson-private/tmpf8io5qb2/testfile.c -o /home/garamog/.config/picom/build/meson-private/tmpf8io5qb2/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -Wc2x-extensions -Wno-c2x-extensions` -> 1
+stderr:
+cc: error: unrecognized command-line option '-Wc2x-extensions'; did you mean '-Wc++20-extensions'?
+-----------
+Compiler for C supports arguments -Wno-c2x-extensions: NO 
+
+Executing subproject test.h 
+
+Project name: test.h
+Project version: undefined
+C compiler for the host machine: cc (gcc 14.1.1 "cc (GCC) 14.1.1 20240522 (Red Hat 14.1.1-4)")
+C linker for the host machine: cc ld.bfd 2.41-37
+C compiler for the build machine: cc (gcc 14.1.1 "cc (GCC) 14.1.1 20240522 (Red Hat 14.1.1-4)")
+C linker for the build machine: cc ld.bfd 2.41-37
+Build targets in project: 0
+Subproject test.h finished.
+
+Pkg-config binary missing from cross or native file, or env var undefined.
+Trying a default Pkg-config fallback at pkg-config
+Found pkg-config: YES (/usr/bin/pkg-config) 2.1.0
+Determining dependency 'libev' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --modversion libev` -> 1
+stderr:
+Package libev was not found in the pkg-config search path.
+Perhaps you should add the directory containing `libev.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'libev', required by 'virtual:world', not found
+-----------
+CMake binary for host machine is not cached
+CMake binary missing from cross or native file, or env var undefined.
+Trying a default CMake fallback at cmake
+Did not find CMake 'cmake'
+Found CMake: NO
+CMake binary for machine host machine not found. Giving up.
+Run-time dependency libev found: NO (tried pkgconfig and cmake)
+Running compile:
+Working directory:  /home/garamog/.config/picom/build/meson-private/tmpk12ssijr
+Code:
+ int main(void) { return 0; }
+
+-----------
+Command line: `cc /home/garamog/.config/picom/build/meson-private/tmpk12ssijr/testfile.c -o /home/garamog/.config/picom/build/meson-private/tmpk12ssijr/output.exe -D_FILE_OFFSET_BITS=64 -O0 -lev -Wl,--allow-shlib-undefined` -> 0
+Library ev found: YES
+Running compile:
+Working directory:  /home/garamog/.config/picom/build/meson-private/tmpqxf8wf72
+Code:
+ int main(void) { return 0; }
+
+-----------
+Command line: `cc /home/garamog/.config/picom/build/meson-private/tmpqxf8wf72/testfile.c -o /home/garamog/.config/picom/build/meson-private/tmpqxf8wf72/output.exe -D_FILE_OFFSET_BITS=64 -O0 -lm -Wl,--allow-shlib-undefined` -> 0
+Library m found: YES
+Determining dependency 'pixman-1' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --modversion pixman-1` -> 0
+stdout:
+0.43.4
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --cflags pixman-1` -> 0
+stdout:
+-I/usr/include/pixman-1
+-----------
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs pixman-1` -> 0
+stdout:
+-L/usr/lib64 -lpixman-1
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs pixman-1` -> 0
+stdout:
+-lpixman-1
+-----------
+Running compile:
+Working directory:  /home/garamog/.config/picom/build/meson-private/tmpf5h2k0kk
+Code:
+ 
+        #include<stddef.h>
+        #include<stdio.h>
+        int main(void) {
+            printf("%ld\n", (long)(sizeof(void *)));
+            return 0;
+        }
+-----------
+Command line: `cc /home/garamog/.config/picom/build/meson-private/tmpf5h2k0kk/testfile.c -o /home/garamog/.config/picom/build/meson-private/tmpf5h2k0kk/output.exe -D_FILE_OFFSET_BITS=64 -O0` -> 0
+Program stdout:
+
+8
+
+Program stderr:
+
+
+Running compile:
+Working directory:  /home/garamog/.config/picom/build/meson-private/tmppae0vx0f
+Code:
+ 
+-----------
+Command line: `cc /home/garamog/.config/picom/build/meson-private/tmppae0vx0f/testfile.c -o /home/garamog/.config/picom/build/meson-private/tmppae0vx0f/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 --print-search-dirs` -> 0
+stdout:
+install: /usr/lib/gcc/x86_64-redhat-linux/14/
+programs: =/usr/libexec/gcc/x86_64-redhat-linux/14/:/usr/libexec/gcc/x86_64-redhat-linux/14/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/14/:/usr/lib/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/14/../../../../x86_64-redhat-linux/bin/x86_64-redhat-linux/14/:/usr/lib/gcc/x86_64-redhat-linux/14/../../../../x86_64-redhat-linux/bin/
+libraries: =/usr/lib/gcc/x86_64-redhat-linux/14/:/usr/lib/gcc/x86_64-redhat-linux/14/../../../../x86_64-redhat-linux/lib/x86_64-redhat-linux/14/:/usr/lib/gcc/x86_64-redhat-linux/14/../../../../x86_64-redhat-linux/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/14/../../../x86_64-redhat-linux/14/:/usr/lib/gcc/x86_64-redhat-linux/14/../../../../lib64/:/lib/x86_64-redhat-linux/14/:/lib/../lib64/:/usr/lib/x86_64-redhat-linux/14/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/14/../../../../x86_64-redhat-linux/lib/:/usr/lib/gcc/x86_64-redhat-linux/14/../../../:/lib/:/usr/lib/
+-----------
+Run-time dependency pixman-1 found: YES 0.43.4
+Determining dependency 'x11' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --modversion x11` -> 0
+stdout:
+1.8.9
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --cflags x11` -> 0
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs x11` -> 0
+stdout:
+-L/usr/lib64 -lX11
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs x11` -> 0
+stdout:
+-lX11
+-----------
+Run-time dependency x11 found: YES 1.8.9
+Determining dependency 'x11-xcb' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --modversion x11-xcb` -> 0
+stdout:
+1.8.9
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --cflags x11-xcb` -> 0
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs x11-xcb` -> 0
+stdout:
+-L/usr/lib64 -lX11-xcb -lX11 -lxcb
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs x11-xcb` -> 0
+stdout:
+-lX11-xcb -lX11 -lxcb
+-----------
+Run-time dependency x11-xcb found: YES 1.8.9
+Determining dependency 'xcb-image' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --modversion xcb-image` -> 0
+stdout:
+0.4.1
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --cflags xcb-image` -> 0
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs xcb-image` -> 0
+stdout:
+-L/usr/lib64 -lxcb-image -lxcb -lxcb-shm
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs xcb-image` -> 0
+stdout:
+-lxcb-image -lxcb -lxcb-shm
+-----------
+Run-time dependency xcb-image found: YES 0.4.1
+Determining dependency 'xcb-renderutil' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --modversion xcb-renderutil` -> 0
+stdout:
+0.3.10
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --cflags xcb-renderutil` -> 0
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs xcb-renderutil` -> 0
+stdout:
+-L/usr/lib64 -lxcb-render-util -lxcb -lxcb-render
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs xcb-renderutil` -> 0
+stdout:
+-lxcb-render-util -lxcb -lxcb-render
+-----------
+Run-time dependency xcb-renderutil found: YES 0.3.10
+Determining dependency 'xcb-util' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --modversion xcb-util` -> 0
+stdout:
+0.4.1
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --cflags xcb-util` -> 0
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs xcb-util` -> 0
+stdout:
+-L/usr/lib64 -lxcb-util -lxcb
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs xcb-util` -> 0
+stdout:
+-lxcb-util -lxcb
+-----------
+Run-time dependency xcb-util found: YES 0.4.1
+Determining dependency 'xext' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --modversion xext` -> 0
+stdout:
+1.3.6
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --cflags xext` -> 0
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs xext` -> 0
+stdout:
+-L/usr/lib64 -lXext
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs xext` -> 0
+stdout:
+-lXext
+-----------
+Run-time dependency xext found: YES 1.3.6
+Run-time dependency threads found: YES
+Determining dependency 'xcb' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --modversion xcb` -> 0
+stdout:
+1.17.0
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --cflags xcb` -> 0
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs xcb` -> 0
+stdout:
+-L/usr/lib64 -lxcb
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs xcb` -> 0
+stdout:
+-lxcb
+-----------
+Run-time dependency xcb found: YES 1.17.0
+Determining dependency 'xcb-composite' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --modversion xcb-composite` -> 0
+stdout:
+1.17.0
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --cflags xcb-composite` -> 0
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs xcb-composite` -> 0
+stdout:
+-L/usr/lib64 -lxcb-composite
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs xcb-composite` -> 0
+stdout:
+-lxcb-composite
+-----------
+Run-time dependency xcb-composite found: YES 1.17.0
+Determining dependency 'xcb-damage' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --modversion xcb-damage` -> 0
+stdout:
+1.17.0
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --cflags xcb-damage` -> 0
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs xcb-damage` -> 0
+stdout:
+-L/usr/lib64 -lxcb-damage
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs xcb-damage` -> 0
+stdout:
+-lxcb-damage
+-----------
+Run-time dependency xcb-damage found: YES 1.17.0
+Determining dependency 'xcb-glx' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --modversion xcb-glx` -> 0
+stdout:
+1.17.0
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --cflags xcb-glx` -> 0
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs xcb-glx` -> 0
+stdout:
+-L/usr/lib64 -lxcb-glx
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs xcb-glx` -> 0
+stdout:
+-lxcb-glx
+-----------
+Run-time dependency xcb-glx found: YES 1.17.0
+Determining dependency 'xcb-present' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --modversion xcb-present` -> 0
+stdout:
+1.17.0
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --cflags xcb-present` -> 0
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs xcb-present` -> 0
+stdout:
+-L/usr/lib64 -lxcb-present
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs xcb-present` -> 0
+stdout:
+-lxcb-present
+-----------
+Run-time dependency xcb-present found: YES 1.17.0
+Determining dependency 'xcb-randr' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --modversion xcb-randr` -> 0
+stdout:
+1.17.0
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --cflags xcb-randr` -> 0
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs xcb-randr` -> 0
+stdout:
+-L/usr/lib64 -lxcb-randr
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs xcb-randr` -> 0
+stdout:
+-lxcb-randr
+-----------
+Run-time dependency xcb-randr found: YES 1.17.0
+Determining dependency 'xcb-render' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --modversion xcb-render` -> 0
+stdout:
+1.17.0
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --cflags xcb-render` -> 0
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs xcb-render` -> 0
+stdout:
+-L/usr/lib64 -lxcb-render
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs xcb-render` -> 0
+stdout:
+-lxcb-render
+-----------
+Run-time dependency xcb-render found: YES 1.17.0
+Determining dependency 'xcb-shape' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --modversion xcb-shape` -> 0
+stdout:
+1.17.0
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --cflags xcb-shape` -> 0
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs xcb-shape` -> 0
+stdout:
+-L/usr/lib64 -lxcb-shape
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs xcb-shape` -> 0
+stdout:
+-lxcb-shape
+-----------
+Run-time dependency xcb-shape found: YES 1.17.0
+Determining dependency 'xcb-sync' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --modversion xcb-sync` -> 0
+stdout:
+1.17.0
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --cflags xcb-sync` -> 0
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs xcb-sync` -> 0
+stdout:
+-L/usr/lib64 -lxcb-sync
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs xcb-sync` -> 0
+stdout:
+-lxcb-sync
+-----------
+Run-time dependency xcb-sync found: YES 1.17.0
+Determining dependency 'xcb-xfixes' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --modversion xcb-xfixes` -> 0
+stdout:
+1.17.0
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --cflags xcb-xfixes` -> 0
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs xcb-xfixes` -> 0
+stdout:
+-L/usr/lib64 -lxcb-xfixes
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs xcb-xfixes` -> 0
+stdout:
+-lxcb-xfixes
+-----------
+Run-time dependency xcb-xfixes found: YES 1.17.0
+Determining dependency 'libconfig' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --modversion libconfig` -> 0
+stdout:
+1.7.3
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --cflags libconfig` -> 0
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs libconfig` -> 0
+stdout:
+-L/usr/lib64 -lconfig
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs libconfig` -> 0
+stdout:
+-lconfig
+-----------
+Run-time dependency libconfig found: YES 1.7.3
+Running compile:
+Working directory:  /home/garamog/.config/picom/build/meson-private/tmpokzd8bhy
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("uthash.h")
+          #error "Header 'uthash.h' could not be found"
+         #endif
+        #else
+         #include <uthash.h>
+        #endif
+-----------
+Command line: `cc /home/garamog/.config/picom/build/meson-private/tmpokzd8bhy/testfile.c -E -P -D_FILE_OFFSET_BITS=64 -P -O0 -std=c11` -> 0
+Has header "uthash.h" : YES 
+Determining dependency 'libpcre2-8' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --modversion libpcre2-8` -> 0
+stdout:
+10.42
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --cflags libpcre2-8` -> 0
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs libpcre2-8` -> 0
+stdout:
+-L/usr/lib64 -lpcre2-8
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs libpcre2-8` -> 0
+stdout:
+-lpcre2-8
+-----------
+Run-time dependency libpcre2-8 found: YES 10.42
+Determining dependency 'epoxy' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --modversion epoxy` -> 0
+stdout:
+1.5.10
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --cflags epoxy` -> 0
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs epoxy` -> 0
+stdout:
+-L/usr/lib64 -lepoxy
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs epoxy` -> 0
+stdout:
+-lepoxy
+-----------
+Run-time dependency epoxy found: YES 1.5.10
+Determining dependency 'dbus-1' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --modversion dbus-1` -> 0
+stdout:
+1.14.10
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --cflags dbus-1` -> 0
+stdout:
+-I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include
+-----------
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs dbus-1` -> 0
+stdout:
+-L/usr/lib64 -ldbus-1
+-----------
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --libs dbus-1` -> 0
+stdout:
+-ldbus-1
+-----------
+Run-time dependency dbus-1 found: YES 1.14.10
+Running compile:
+Working directory:  /home/garamog/.config/picom/build/meson-private/tmpqn69wvx7
+Code:
+ extern int i;
+int i;
+
+-----------
+Command line: `cc /home/garamog/.config/picom/build/meson-private/tmpqn69wvx7/testfile.c -o /home/garamog/.config/picom/build/meson-private/tmpqn69wvx7/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 -fsanitize=fuzzer` -> 1
+stderr:
+cc: error: unrecognized argument to '-fsanitize=' option: 'fuzzer'
+-----------
+Compiler for C supports arguments -fsanitize=fuzzer: NO 
+Build targets in project: 1
+
+picom 11
+
+  Subprojects
+    test.h   : YES
+
+  User defined options
+    buildtype: release
+
+Found ninja-1.11.1 at /usr/bin/ninja
+Failed to guess install tag for /usr/local/share/applications/picom.desktop
+Failed to guess install tag for /usr/local/etc/xdg/autostart/picom.desktop
+Failed to guess install tag for /usr/local/share/applications/compton.desktop
+Failed to guess install tag for /usr/local/share/icons/hicolor/48x48/apps/compton.png
+Failed to guess install tag for /usr/local/share/icons/hicolor/scalable/apps/compton.svg
+Failed to guess install tag for install script: /home/garamog/.config/picom/meson/install.sh
+Failed to guess install tag for /usr/local/share/applications/picom.desktop
+Failed to guess install tag for /usr/local/etc/xdg/autostart/picom.desktop
+Failed to guess install tag for /usr/local/share/applications/compton.desktop
+Failed to guess install tag for /usr/local/share/icons/hicolor/48x48/apps/compton.png
+Failed to guess install tag for /usr/local/share/icons/hicolor/scalable/apps/compton.svg
+Failed to guess install tag for install script: /home/garamog/.config/picom/meson/install.sh

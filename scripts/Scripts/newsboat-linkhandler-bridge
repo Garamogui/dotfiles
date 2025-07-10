@@ -1,0 +1,8 @@
+#!/bin/sh
+
+echo "$1" | xclip -selection clipboard
+
+kitty -e nohup linkhandler "$1";
+
+# Pastes URL into linkhandler 
+xclip -selection clipboard | linkhandler

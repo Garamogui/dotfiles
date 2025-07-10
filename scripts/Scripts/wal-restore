@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# Set the colorscheme using pywal and the wallpaper using feh
+
+wal_tile() {
+  wal -R
+
+  # Get the wallpaper file path
+  wallpaper_file="${HOME}/.cache/wal/wal"
+
+  # Check if the wallpaper file exists and is readable
+  if [ ! -f "${wallpaper_file}" ] || [ ! -r "${wallpaper_file}" ]; then
+    echo "Error: Wallpaper file not found or not readable"
+    return 1
+  fi
+
+  # Run the feh command with error handling
+  if ! feh --bg-center "$(cat "${wallpaper_file}")"; then
+    echo "Error: Failed to run feh command"
+    return 1
+  fi
+}
+wal_tile "$@"

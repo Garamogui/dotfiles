@@ -1,93 +1,77 @@
 local map = vim.keymap.set
 
 -------------- Editor -----------------
-map("n", "<leader>so", ":w<CR>:so<CR>", { desc = "Save and source file." })
+map("n", "<leader>so", ":w<CR>:so<CR>", { desc = "󰸧 Save and source file." })
 
 --map("n", "<leader>po", ":Ex<CR>")
 
---Spliting buffers
-map("n", "<leader>hs", ":split<CR>", { desc = "" })
-map("n", "<leader>vs", ":vsplit<CR>")
+--Splitting buffers
+map("n", "<leader>hs", ":split<CR>", { desc = "󰤻 Split window horizontally" })
+map("n", "<leader>vs", ":vsplit<CR>", { desc = "󰤼 Split window vertically" })
 
-map("n", "<leader>ss", ":w<CR>")
-map("n", "<leader>hl", ":nohlsearch<CR>")
+map("n", "<leader>ss", ":w<CR>", { desc = "勒 Save file" })
+map("n", "<leader>hl", ":nohlsearch<CR>", { desc = " Clear search highlight" })
 
 --- Increase and decrease width of the window
-
+-- Add mappings here if needed
 
 -- esc clears highlights
-map("n", "<Esc>", "<cmd>noh<CR>", { desc = "General Clear highlights" })
+map("n", "<Esc>", "<cmd>noh<CR>", { desc = " General clear highlights" })
 
 -- Ctrl+C to copy whole file.
-map("n", "<C-s>", "<cmd>w<CR>", { desc = "General Save file" })
-map("n", "<C-c>", "<cmd>%y+<CR>", { desc = "General Copy whole file" })
-
+map("n", "<C-s>", "<cmd>w<CR>", { desc = " General save file" })
+map("n", "<C-c>", "<cmd>%y+<CR>", { desc = " Copy whole file to clipboard" })
 
 
 ------- Moves Items in visual mode  ---------
-map("v", "J", ":m '>+1<CR>gv=gv")
-map("v", "K", ":m '<-2<CR>gv=gv")
+map("v", "J", ":m '>+1<CR>gv=gv", { desc = "↧ Move selection down" })
+map("v", "K", ":m '<-2<CR>gv=gv", { desc = "↥ Move selection up" })
 
 ------- Joining lines makes the cursor stay where it was ---------
-map("n", "J", "mzJ`z")
+map("n", "J", "mzJ`z", { desc = "﬌ Join line below" })
 
 ------- Moves maintaining the cursor in the middle of the screen ---------
-map('n', '<C-d>', '<C-d>zz')
-map('n', '<C-u>', '<C-u>zz')
-map('n', 'n', 'nzzzv')
-map('n', 'N', 'Nzzzv')
-map('x', '<leader>p', "\"_dp")
+map('n', '<C-d>', '<C-d>zz', { desc = "󱦒 Scroll half-page down and center" })
+map('n', '<C-u>', '<C-u>zz', { desc = "󱦒 Scroll half-page up and center" })
+map('n', 'n', 'nzzzv', { desc = " Next search result centered" })
+map('n', 'N', 'Nzzzv', { desc = " Previous search result centered" })
+map('x', '<leader>p', '"_dp', { desc = " Paste over selection without yanking" })
 
 ------- Clipboard ---------
-map('n', '<leader>y', "\"+y", { desc = "Saves to clipboard" })
-map('v', '<leader>y', "\"+y", { desc = "Saves to clipboard (visual mode)" })
-map('n', '<leader>Y', "\"+Y", { desc = "Saves current line to clipboard" })
-map('n', '<leader>p', "\"+p", { desc = "Pastes from clipboard" })
-map('n', '<leader>P', "\"+P", { desc = "Pastes back from clipboard" })
+map('n', '<leader>y', '"+y', { desc = " Yank to system clipboard" })
+map('v', '<leader>y', '"+y', { desc = " Yank visual selection to clipboard" })
+map('n', '<leader>Y', '"+Y', { desc = " Yank line to system clipboard" })
+map('n', '<leader>p', '"+p', { desc = " Paste from system clipboard" })
+map('n', '<leader>P', '"+P', { desc = " Paste before cursor from clipboard" })
 
 ------- Telescope Remaps ---------
--- local builtin = require("telescope.builtin")
---map("n", "<C-p>", builtin.find_files, {})
----- map("n", "<leader>fg", builtin.live_grep, {})
---map("n", "<leader>fb", builtin.buffers, {})
---map("n", "<leader>fh", builtin.help_tags, {})
-------- Telescope Remaps ---------
----- telescope
-map("n", "<leader>fw", "<cmd>Telescope live_grep<CR>", { desc = "telescope live grep" })
-map("n", "<leader>fb", "<cmd>Telescope buffers<CR>", { desc = "telescope find buffers" })
-map("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", { desc = "telescope help page" })
-map("n", "<leader>ma", "<cmd>Telescope marks<CR>", { desc = "telescope find marks" })
-map("n", "<leader>fo", "<cmd>Telescope oldfiles<CR>", { desc = "telescope find oldfiles" })
-map("n", "<leader>fz", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { desc = "telescope find in current buffer" })
-map("n", "<leader>cm", "<cmd>Telescope git_commits<CR>", { desc = "telescope git commits" })
-map("n", "<leader>gst", "<cmd>Telescope git_status<CR>", { desc = "telescope git status" })
-map("n", "<leader>br", "<cmd>Telescope git_branches<CR>", { desc = "telescope git status" })
-map("n", "<leader>pt", "<cmd>Telescope terms<CR>", { desc = "telescope pick hidden term" })
--- map("n", "<leader>th", "<cmd>Telescope themes<CR>", { desc = "telescope nvchad themes" })
-map("n", "<C-p>", "<cmd>Telescope find_files<cr>", { desc = "telescope find files" })
-map("n", "<leader>fa", "<cmd>Telescope find_files follow=true no_ignore=true hidden=true<CR>",
- { desc = "telescope find all files" })
+map("n", "<leader>fw", "<cmd>Telescope live_grep<CR>", { desc = "Telescope live grep" })
+map("n", "<leader>fb", "<cmd>Telescope buffers<CR>", { desc = "Telescope list buffers" })
+map("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", { desc = "Telescope help tags" })
+map("n", "<leader>ma", "<cmd>Telescope marks<CR>", { desc = "Telescope marks" })
+map("n", "<leader>fo", "<cmd>Telescope oldfiles<CR>", { desc = "Telescope old files" })
+map("n", "<leader>fz", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { desc = "Telescope find in buffer" })
+map("n", "<leader>cm", "<cmd>Telescope git_commits<CR>", { desc = "Telescope git commits" })
+map("n", "<leader>gst", "<cmd>Telescope git_status<CR>", { desc = "Telescope git status" })
+map("n", "<leader>br", "<cmd>Telescope git_branches<CR>", { desc = "Telescope git branches" })
+map("n", "<leader>pt", "<cmd>Telescope terms<CR>", { desc = "Telescope pick terminal" })
+map("n", "<C-p>", "<cmd>Telescope find_files<cr>", { desc = "Telescope find files" })
+map("n", "<leader>fa", "<cmd>Telescope find_files follow=true no_ignore=true hidden=true<CR>", { desc = "Telescope find all files" })
 
 ------- Neotree ---------
-map('n', '<leader>po', ':Neotree source=filesystem reveal=true position=left <CR>')
+map('n', '<leader>po', ':Neotree source=filesystem reveal=true position=left <CR>', { desc = "  Neotree file explorer" })
 
 ------- Copilot ---------
-map('n', '<leader>cd', ':Copilot disable<CR>')
-map('n', '<leader>ce', ':Copilot enable<CR>')
+map('n', '<leader>cd', ':Copilot disable<CR>', { desc = "  Disable Copilot" })
+map('n', '<leader>ce', ':Copilot enable<CR>', { desc = "  Enable Copilot" })
 
 
 ------- tailwind sort --------
-map("n", "<leader>ts", ":TailwindSort<CR>")
+map("n", "<leader>ts", ":TailwindSort<CR>", { desc = "󱏿  Sort Tailwind classes" })
 ------- Terminal --------
--- terminal
-map("t", "<C-x>", "<C-\\><C-N>", { desc = "terminal escape terminal mode" })
-
-
-
+map("t", "<C-x>", "<C-\\><C-N>", { desc = "  Exit terminal mode" })
 
 ------- LuaSnip --------
------ Yes, we're just executing a bunch of Vimscript, but this is the officially
--- endorsed method; see https://github.com/L3MON4D3/LuaSnip#keymaps
 vim.cmd [[
 " Use Tab to expand and jump through snippets
 imap <silent><expr> <Tab> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>'

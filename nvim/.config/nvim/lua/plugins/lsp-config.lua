@@ -7,15 +7,6 @@ return {
     end,
   },
   {
-    "williamboman/mason-lspconfig.nvim",
-    lazy = false,
-    config = function()
-      require("mason-lspconfig").setup({
-        automatic_installation = false,
-      })
-    end,
-  },
-  {
     "neovim/nvim-lspconfig",
     lazy = false,
     config = function()
@@ -48,7 +39,7 @@ return {
       lspconfig.clangd.setup({
         capabilities = capabilities,
       })
-      lspconfig.emmet_language_server.setup({
+      lspconfig.emmet_ls.setup({
         capabilities = capabilities,
       })
 

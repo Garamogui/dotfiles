@@ -1,0 +1,39 @@
+# News
+##  Catholic
+"----------CATHOLIC ARTICLES----------"
+https://www.cnbb.org.br/feed/                                         "Catholic" "Liturgia"                  
+https://www.vaticannews.va/pt.rss.xml                                 "Catholic" "News"
+https://www.ncregister.com/feeds/general-news.xml                     "Catholic" "News"
+https://www.ncregister.com/feeds/weekly-newsletter.xml                "Catholic" "News"
+https://bibliotecacatolica.com.br/feed/                               "Catholic" "News" "Blog"
+https://santotomas.com.br/feed/                                       "Catholic" "Blog"
+https://templariodemaria.com/feed/                                    "Catholic" "Blog"
+https://opusdei.org/pt-pt/lastarticles.xml                            "Catholic" "Blog"
+" "
+
+##  General
+"----------GENERAL ARTICLES----------"
+https://spo.ifsp.edu.br/component/content/category?format=feed&amp;type=rss "IFSP" "General" "News"
+https://blog.grancursosonline.com.br/concursos/concursos-abertos/feed/      "General" "Concursos"          "~Gran Concursos - Concursos em aberto"
+https://downloads.khinsider.com/forums/index.php?forums/-/index.rss         "General" "Music" "Downloads" "Forum" "~KHInsider"
+https://lukesmith.xyz/index.xml                                             "General" "Blog" "Linux" "Freedom" "Independence" "~Luke Smith"
+
+## Tech
+" "
+"----------TECH ARTICLES----------"
+https://itsfoss.com/rss/                                              "Tech" "FOSS"
+https://christitus.com/categories/linux/index.xml                     "Tech" "Linux" "FOSS"
+https://christitus.com/categories/android/index.xml                   "Tech" "Android" "FOSS"
+https://christitus.com/categories/hardware/index.xml                  "Tech" "Hardware" "FOSS"
+https://christitus.com/categories/windows/index.xml                   "Tech" "Windows" "FOSS"
+https://www.tabnews.com.br/recentes/rss                               "Tech" "Blog"    
+https://blog.boot.dev/index.xml                                       "Tech" "Blog" "Programing"
+
+
+" "
+
+# YouTube
+" "
+"----------VIDEOS----------"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA "Videos" "Tech"                "~Mental Outlaw"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCP6L9TPS3pHccVRiDB_cvqQ "Videos" "Catholic"            "~Padre Paulo Ricardo"

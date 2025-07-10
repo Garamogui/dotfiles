@@ -1,0 +1,8 @@
+prefix=/home/garamog/.config/picom/build
+includedir=${prefix}/include
+srcdir=/home/garamog/.config/picom
+
+Name: picom-api
+Description: picom API headers
+Version: 11
+Requires: pixman-1, xcb
