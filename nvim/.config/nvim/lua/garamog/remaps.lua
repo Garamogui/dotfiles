@@ -45,6 +45,7 @@ map('n', '<leader>p', '"+p', { desc = " Paste from system clipboard" })
 map('n', '<leader>P', '"+P', { desc = " Paste before cursor from clipboard" })
 
 ------- Telescope Remaps ---------
+map("n", "<leader>th", "<cmd>Telescope themes<CR>", { desc = "Theme Switcher" })
 map("n", "<leader>fw", "<cmd>Telescope live_grep<CR>", { desc = "Telescope live grep" })
 map("n", "<leader>fb", "<cmd>Telescope buffers<CR>", { desc = "Telescope list buffers" })
 map("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", { desc = "Telescope help tags" })
