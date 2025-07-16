@@ -20,7 +20,8 @@ exec --no-startup-id /usr/lib/kdeconnectd
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -l blur
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -33,10 +34,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
-# Diminuir brilho
+# brightness control using xrandr script.
 bindsym XF86MonBrightnessDown exec ~/Scripts/brightness-control down
-
-# Aumentar brilho
 bindsym XF86MonBrightnessUp exec ~/Scripts/brightness-control up
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -286,7 +285,6 @@ set_from_resource $bg i3wm.color0 #f0f0f0
 
 # autostart
 # ------- autotiling -------
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always $HOME/Scripts/launch-borders
-# exec_always --no-startup-id $HOME/Scripts/launch-borders.sh
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
+exec_always --no-startup-id $HOME/Scripts/launch-borders.sh
 

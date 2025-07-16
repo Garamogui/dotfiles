@@ -43,4 +43,8 @@ wal_tile() {
   fi
 }
 wal_tile "$@"
-launch-borders
+# Launch the borders and betterlockscreen
+launch-borders & 
+
+# Run betterlockscreen with the new wallpaper
+betterlockscreen -u "$(cat "$wallpaper_file")" --fx blur
