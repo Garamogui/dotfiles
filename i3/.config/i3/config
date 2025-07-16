@@ -33,6 +33,12 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
+# Diminuir brilho
+bindsym XF86MonBrightnessDown exec ~/Scripts/brightness-control down
+
+# Aumentar brilho
+bindsym XF86MonBrightnessUp exec ~/Scripts/brightness-control up
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -76,9 +82,9 @@ bindsym $mod+Mod1+l exec betterlockscreen -l blur
 # kill focused window
 bindsym $mod+q kill
 
-# brightness?
-bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
-bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
+# # brightness?
+# bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+# bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 
 # Resizing
 bindsym $mod+Ctrl+h resize shrink width 10 px or 10 ppt
@@ -244,7 +250,7 @@ bindsym $mod+r mode "resize"
 # gaps/borders
 gaps inner 6px
 hide_edge_borders both
-for_window [class=".*"] border pixel 2
+for_window [class=".*"] border pixel 0
 
 
 # class                 border  backgr. text    indicator child_border
@@ -281,5 +287,6 @@ set_from_resource $bg i3wm.color0 #f0f0f0
 # autostart
 # ------- autotiling -------
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always $HOME/Scripts/launch-borders
 # exec_always --no-startup-id $HOME/Scripts/launch-borders.sh
 

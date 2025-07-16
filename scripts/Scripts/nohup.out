@@ -9,3 +9,11 @@ Ignoring this section.
 WARNING: Icon 'kdeconnect' not found in icon_path
 WARNING: Icon 'kdeconnect' not found in icon_path
 WARNING: Icon 'dialog-information' not found in icon_path
+/home/garamog/xborder/xborders:284: DeprecationWarning: Gtk.Window.set_wmclass is deprecated
+  self.set_wmclass("xborders", "xborder")
+/home/garamog/xborder/xborders:284: DeprecationWarning: Gtk.Window.set_wmclass is deprecated
+  self.set_wmclass("xborders", "xborder")
+/home/garamog/xborder/xborders:284: DeprecationWarning: Gtk.Window.set_wmclass is deprecated
+  self.set_wmclass("xborders", "xborder")
+/home/garamog/xborder/xborders:284: DeprecationWarning: Gtk.Window.set_wmclass is deprecated
+  self.set_wmclass("xborders", "xborder")

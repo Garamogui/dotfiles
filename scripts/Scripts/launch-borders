@@ -1,2 +1,5 @@
 #!/bin/sh
-nohup ~/xborder/xborders --border-radius 20 --border-width 2 --border-rgba "#89B4FA" &
+COLOR1=$(xrdb -query | grep -m 1 'color1:' | awk '{print $2}')
+
+pkill xborders 2>/dev/null
+nohup xborders --border-radius 20 --border-width 3 --border-rgba "$COLOR1" &

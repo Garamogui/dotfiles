@@ -21,6 +21,12 @@ cat << EOF > $HOME/.config/dunst/dunstrc
     show_indicators = yes
     icon_position = left
     max_icon_size = 32
+
+    highlight = "${color1}, ${color15}"
+    frame_color = "${color1}"
+    progress_bar_corner_radius = 20
+    progress_bar_corners = all
+    corner_radius = 9
     
     sticky_history = yes
     history_length = 20
@@ -29,9 +35,8 @@ cat << EOF > $HOME/.config/dunst/dunstrc
     browser = /usr/bin/firefox -new-tab
     title = Dunst
     class = Dunst
-    startup_notification = false
+    startup_notification = true
     verbosity= mesg
-    corner_radius = 0
     force_xinerama = false
     follow = keyboard
     mouse_left_click = close_current
@@ -40,12 +45,12 @@ cat << EOF > $HOME/.config/dunst/dunstrc
     geometry = "300x5-30-30"
     indicate_hidden = yes
     shrink = no
-    transparency = 16
+    transparency = 7
     notification_height = 0
     separator_height = 2
-    padding = 8
+    padding = 10
     horizontal_padding = 8
-    frame_width = 1
+    frame_width = 2
 [experimental]
     per_monitor_dpi = false
 [shortcuts]
@@ -53,12 +58,11 @@ cat << EOF > $HOME/.config/dunst/dunstrc
     close_all = ctrl+shift+space
     history = ctrl+grave
     context = ctrl+shift+period
-frame_color = "${cursor}"
 separator_color = "${foreground}"
 [base16_low]
     msg_urgency = low
-    background = "${color0}"
-    foreground = "${color1}"
+    background = "${color1}"
+    foreground = "${color2}"
 [base16_normal]
     msg_urgency = normal
     background = "${background}"
@@ -68,3 +72,13 @@ separator_color = "${foreground}"
     background = "${color4}"
     foreground = "${color14}"
 EOF
+
+# Restart dunst and send confirmation notification
+killall dunst 2>/dev/null
+setsid dunst &
+sleep 1
+notify-send "Dunst configuration updated!" "The editing in the dunstrc file wal successful."
+
+
+
+

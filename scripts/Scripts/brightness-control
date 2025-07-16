@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# Use xrandr to adjust screen brightness and send a notification
+
+# Get the current brightness
+current_brightness=$(xrandr --verbose | grep -m1 -oP 'Brightness: \K[0-9.]+')
+
+# Function to send notification
+send_notification() {
+    # $1 is brightness as a float (e.g., 0.7)
+    brightness_percent=$(awk "BEGIN {printf \"%d\", $1 * 100}")
+    dunstify -a "Backlight" -r 9094 -h int:value:"$brightness_percent" -i "brightness" "Brightness" "Currently at ${brightness_percent}%"
+}
+
+# Prevent brightness going below a certain level (e.g., 0.1)
+if (( $(echo "$current_brightness < 0.1" | bc -l) )) && [ "$1" = "down" ]; then
+    exit 1
+fi
+
+case $1 in
+    up)
+        # Increase brightness by 10%
+        new_brightness=$(awk "BEGIN {print ($current_brightness < 1.2) ? $current_brightness + 0.1 : 1.2}")
+        xrandr --output eDP-1 --brightness "$new_brightness"
+        send_notification "$new_brightness"
+        ;;
+    down)
+        # Decrease brightness by 10%
+        new_brightness=$(awk "BEGIN {print ($current_brightness > 0.1) ? $current_brightness - 0.1 : 0.1}")
+        xrandr --output eDP-1 --brightness "$new_brightness"
+        send_notification "$new_brightness"
+        ;;
+    *)
+        # If no argument, just send notification with current brightness
+        send_notification "$current_brightness"
+        ;;
+esac

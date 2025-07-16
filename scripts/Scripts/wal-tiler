@@ -43,3 +43,4 @@ wal_tile() {
   fi
 }
 wal_tile "$@"
+launch-borders

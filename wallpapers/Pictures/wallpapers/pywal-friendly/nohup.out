@@ -28,3 +28,5 @@ WARNING: Icon 'kdeconnect' not found in icon_path
 WARNING: Icon 'kdeconnect' not found in icon_path
 WARNING: Icon 'kdeconnect' not found in icon_path
 WARNING: Icon 'kdeconnect' not found in icon_path
+XIO:  fatal IO error 11 (Resource temporarily unavailable) on X server ":0"
+      after 126565 requests (126565 known processed) with 0 events remaining.
