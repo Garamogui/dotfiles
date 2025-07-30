@@ -23,7 +23,7 @@ return {
       -- | obsidian | mimic Obsidian UI                                          |
       -- | lazy     | will attempt to stay up to date with LazyVim configuration |
       -- | none     | does nothing                                               |
-      preset = 'none',
+      preset = 'obsidian',
       -- The level of logs to write to file: vim.fn.stdpath('state') .. '/render-markdown.log'.
       -- Only intended to be used for plugin development / debugging.
       log_level = 'error',
@@ -472,7 +472,7 @@ return {
         -- | double | use double line border characters |
         -- | round  | use round border corners          |
         -- | none   | does nothing                      |
-        preset = 'none',
+        preset = 'obsidian',
         -- Determines how the table as a whole is rendered.
         -- | none   | disables all rendering                                                  |
         -- | normal | applies the 'cell' style rendering to each row of the table             |

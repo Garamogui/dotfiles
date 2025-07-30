@@ -43,6 +43,17 @@ return {
         capabilities = capabilities,
       })
 
+      -- Only set up Obsidian LSP once a Markdown buffer in a vault is opened:
+      -- Now this will work, because obsidian.nvim is already loaded
+
+      -- lspconfig.obsidian.setup(p{
+      --   capabilities = capabilities,
+      --   workspaces   = {
+      --     { name = "personal", path = vim.fn.expand "~/Documents/general-obsidian-vault" },
+      --     { name = "work",     path = vim.fn.expand "~/vaults/work"               },
+      --   },
+      -- })
+
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       ------------- MAPS FOR LSP -------------
       -- Map <leader>gd to go to definition
@@ -54,4 +65,3 @@ return {
     end,
   },
 }
-

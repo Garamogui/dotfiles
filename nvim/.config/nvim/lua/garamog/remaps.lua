@@ -37,10 +37,16 @@ map('n', 'n', 'nzzzv', { desc = " Next search result centered" })
 map('n', 'N', 'Nzzzv', { desc = " Previous search result centered" })
 map('x', '<leader>p', '"_dp', { desc = " Paste over selection without yanking" })
 
-------- Clipboard ---------
+-------------- Clipboard ------------------
+------- Yank ---------
 map('n', '<leader>y', '"+y', { desc = " Yank to system clipboard" })
 map('v', '<leader>y', '"+y', { desc = " Yank visual selection to clipboard" })
-map('n', '<leader>Y', '"+Y', { desc = " Yank line to system clipboard" })
+map('n', '<leader>Y', 'V"+y', { desc = " Yank line to system clipboard" })
+------- Cut ---------
+map('n', '<leader>x', '"+x', { desc = " Cut to system clipboard" })
+map('v', '<leader>x', '"+x', { desc = " Cut to system clipboard" })
+map('n', '<leader>X', 'V"+x', { desc = " Cut line to system clipboard" })
+------- Paste ---------
 map('n', '<leader>p', '"+p', { desc = " Paste from system clipboard" })
 map('n', '<leader>P', '"+P', { desc = " Paste before cursor from clipboard" })
 
