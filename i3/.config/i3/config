@@ -15,6 +15,13 @@ exec --no-startup-id picom
 exec --no-startup-id dex-autostart --autostart --environment i3
 exec --no-startup-id /usr/lib/kdeconnectd
 
+# Polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
+# autotiling
+exec_always --no-startup-id $HOME/.local/bin/autotiling &
+
+exec --no-startup-id /usr/bin/touch /tmp/i3-test && /home/garamog/Scripts/launch-borders
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -279,12 +286,3 @@ set_from_resource $bg i3wm.color0 #f0f0f0
  client.placeholder      $bg     $bg     $fg  $bg       $bg
 #
 # client.background       $bg
-
-# ----------------- wallpaper -----------------
-#exec_always nitrogen --restore
-
-# autostart
-# ------- autotiling -------
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
-exec_always --no-startup-id $HOME/Scripts/launch-borders.sh
-
